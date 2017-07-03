@@ -14,34 +14,150 @@
 # TUTIER3CODE: Lexicon Tier 3: 5th and 6th digits of 6-digit activity code
 # TEWHERE
 
-activity_where = {1: "Respondent's home or yard",
-            2: "Respondent's workplace",
-            3: "Someone else's home",
-            4: "Restaurant or bar",
-            5: "Place of worship",
-            6: "Grocery store",
-            7: "Other store/mall",
-            8: "School",
-            9: "Outdoors away from home",
-            10: "Library",
-            11: "Other place",
-            12: "Car, truck, or motorcycle (driver)",
-            13: "Car, truck, or motorcycle (passenger)",
-            14: "Walking",
-            15: "Bus",
-            16: "Subway/train",
-            17: "Bicycle",
-            18: "Boat/ferry",
-            19: "Taxi/limousine service",
-            20: "Airplane",
-            21: "Other mode of transportation",
-            30: "Bank",
-            31: "Gym/health club",
-            32: "Post Office",
-            89: "Unspecified place",
-            99: "Unspecified mode of transportation"
-           }
+ACTIVITY_CODE = {
+    '01': {'Personal Care': {
+        '01': {'Sleeping': {
+            '01': 'Sleeping',
+            '02': 'Sleeplessness',
+            '99': 'NEC',
+        }},
+        '02': {'Grooming': {
+            '01': 'Washing, dressing and grooming oneself',
+            '99': 'NEC',
+        }},
+        '03': {'Health-related Self Care': {
+            '01': 'Health-related Self Care',
+            '99': 'NEC',
+        }},
+        '04': {'Personal Activities': {
+            '01': 'Personal/Private activities',
+            '99': 'NEC',
+        }},
+        '05': {'Personal Care Emergencies': {
+            '01': 'Personal Emergencies',
+            '99': 'NEC',
+        }},
+        '99': {'Personal Care, NEC': {
+            '99': 'NEC',
+        }},
+    }},
 
+
+    
+    '02': {'name': 'Household Activities', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },
+    '03': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Caring For & Helping Household (HH) Members',
+    '04': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Caring For & Helping Nonhousehold (NonHH) Members',
+    '05': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Work & Work Related Activities',
+    '06': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Education',
+    '07': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Consumer Purchases',
+    '08': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Professional & Personal Care Services',
+    '09': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Household Services',
+    '10': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Government Services & Civic Obligations',
+    '11': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Eating and Drinking',
+    '12': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Socializing, Relaxing, and Leisure',
+    '13': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Sports, Exercise, and Recreation',
+    '14': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Religious and Spiritual Activities',
+    '15': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Volunteer Activities',
+    '16': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Telephone Calls',
+    '18': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Traveling',
+    '50': {'name': 'Personal', {
+        '01': {'name': 'Sleeping', {
+            '01': 'Sleeping',
+            '99': 'NEC'
+        },'Data Codes',
+}
+
+ACTIVITY_WHERE = {1: "Respondent's home or yard",
+    2: "Respondent's workplace",
+    3: "Someone else's home",
+    4: "Restaurant or bar",
+    5: "Place of worship",
+    6: "Grocery store",
+    7: "Other store/mall",
+    8: "School",
+    9: "Outdoors away from home",
+    10: "Library",
+    11: "Other place",
+    12: "Car, truck, or motorcycle (driver)",
+    13: "Car, truck, or motorcycle (passenger)",
+    14: "Walking",
+    15: "Bus",
+    16: "Subway/train",
+    17: "Bicycle",
+    18: "Boat/ferry",
+    19: "Taxi/limousine service",
+    20: "Airplane",
+    21: "Other mode of transportation",
+    30: "Bank",
+    31: "Gym/health club",
+    32: "Post Office",
+    89: "Unspecified place",
+    99: "Unspecified mode of transportation"
+}
 
 
 # FROM ATUS 2016
@@ -50,7 +166,7 @@ activity_where = {1: "Respondent's home or yard",
 # TULINENO: ATUS person line number
 # TUWHO_CODE: Who was in the room with you / Who accompanied you?
 
-activity_who{18: "Alone",
+ACTIVITY_WHO = {18: "Alone",
             19: "Alone",
             20: "Spouse",
             21: "Unmarried partner",
@@ -77,29 +193,26 @@ activity_who{18: "Alone",
             62: "Customers"
             }
 
-# Comment block
-
-
 
 # PERSON PROPERTIES DEVELOPED FOR LOCATION PERSON MATCHING
 # # https://www.bls.gov/tus/overview.htm
 # # https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=DEC_10_DP_DPDP1&src=pt
 
-lifecycles = [(0.24, 'Dependent'), # 24%
+LIFECYCLES = [(0.24, 'Dependent'), # 24%
               (0.38, 'Pre-family'), # 14%
               (0.54, 'Early Family'), # 16%
               (0.70, 'Late Family'), # 16%
               (0.84, 'Post Family'), # 14%
               (1.00, 'Senior') # 16%
              ]
-socialclasses = [(0.01, 'Upper', 440), # 1%
+SOCIAL_CLASSES = [(0.01, 'Upper', 440), # 1%
                  (0.16, 'Upper Middle', 147), # 15%
                  (0.46, 'Lower Middle', 75), # 30%
                  (0.76, 'Working', 35), # 30%
                  (0.89, 'Working Poor', 20), # 12%
                  (1.00, 'Underclass', 0) # 12%
-                ] #from CPS Household Income notebook
-psychographics = ['active',
+                ] # from CPS Household Income jupyter notebook
+PSYCHOGRAPHICS = ['active',
                   'sedentary',
                   'healthful',
                   'apathetic',
