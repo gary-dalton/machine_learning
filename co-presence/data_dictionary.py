@@ -1,6 +1,7 @@
 
 # FROM ATUS 2016
 # ACTIVITY FILE
+# TUCASEID: ATUS person ID
 # TUACTIVITY_N: Activity line number
 # TRTCCTOT_LN: Total time spent during activity providing secondary childcare for all children < 13 (in minutes)
 # TRTEC_LN: Time spent providing eldercare by activity (in minutes)
@@ -13,6 +14,18 @@
 # TUTIER2CODE: Lexicon Tier 2: 3rd and 4th digits of 6-digit activity code
 # TUTIER3CODE: Lexicon Tier 3: 5th and 6th digits of 6-digit activity code
 # TEWHERE
+
+ACTIVITY_FIELDS = [
+    'TUCASEID',
+    'TUACTIVITY_N',
+    'TUSTARTTIM',
+    'TUSTOPTIME',
+    'TUACTDUR',
+    'TEWHERE',
+    'TUTIER1CODE',
+    'TUTIER2CODE',
+    'TUTIER3CODE'
+]
 
 ACTIVITY_CODE = {
     '01': {'Personal Care': {
@@ -155,7 +168,7 @@ ACTIVITY_CODE = {
             '09': 'Looking after nonhh children (as a primary activity)',
             '10': 'Attending nonhh childrens events',
             '11': 'Waiting for/with nonhh children',
-            '12': 'Picking up/dropping off nonhh children',
+            '12': 'Dropping off/picking up nonhh children',
             '99': 'NEC'
         }},
         '02': {'Activities Related to NonHH Childrens Education': {
@@ -220,9 +233,9 @@ ACTIVITY_CODE = {
         }},
         '04': {'Job Search and Interviewing': {
             '01': 'Job search activities',
-            '02': 'Job interviewing',
-            '03': 'Waiting associated with job search or interview',
-            '04': 'Security procedures rel. to job search/interviewing',
+            '03': 'Job interviewing',
+            '04': 'Waiting associated with job search or interview',
+            '05': 'Security procedures rel. to job search/interviewing',
             '99': 'NEC'
         }},
         '99': {'Work and Work-Related Activities, NEC': {
@@ -371,8 +384,8 @@ ACTIVITY_CODE = {
             '99': 'NEC'
         }},
         '03': {'Waiting Associated w/Govt Svcs or Civic Obligations': {
-            '01': 'Waiting associated with using government services',
-            '02': 'Waiting associated with civic obligations & participation',
+            '04': 'Waiting associated with using government services',
+            '05': 'Waiting associated with civic obligations & participation',
             '99': 'NEC'
         }},
         '04': {'Security Procedures Rel. to Govt Svcs/Civic Obligations': {
@@ -719,7 +732,7 @@ ACTIVITY_CODE = {
             '01': 'Travel related to phone calls',
             '99': 'NEC'
         }},
-        '01': {'Security Procedures Related to Traveling': {
+        '18': {'Security Procedures Related to Traveling': {
             '01': 'Security procedures related to traveling',
             '99': 'NEC'
         }},
